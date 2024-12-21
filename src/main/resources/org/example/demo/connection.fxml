@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.demo.controllers.ControllerConnection"
+          alignment="CENTER" hgap="15" vgap="15" style="-fx-background-color: #f0f4f8; -fx-padding: 40;">
+
+    <Label text="Login to Your Account" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"
+           style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+
+    <Label text="Login:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+           style="-fx-font-size: 14; -fx-text-fill: #555;"/>
+    <TextField fx:id="loginField" promptText="Input login..."
+               GridPane.columnIndex="1" GridPane.rowIndex="1"
+               style="-fx-background-color: #fff; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+           style="-fx-font-size: 14; -fx-text-fill: #555;"/>
+    <PasswordField fx:id="passwordField" promptText="Input password..."
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"
+                   style="-fx-background-color: #fff; -fx-border-color: #ddd; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+    <Button text="Connect" onAction="#handleLoginAction"
+            GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.halignment="RIGHT"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 5 15;"/>
+
+    <Separator GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2"
+               style="-fx-background-color: #ddd;" maxWidth="200"/>
+
+    <Label fx:id="messageLabel" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2"
+           style="-fx-text-fill: red; -fx-font-size: 12; -fx-font-style: italic; -fx-padding: 10 0;" textAlignment="CENTER"/>
+</GridPane>

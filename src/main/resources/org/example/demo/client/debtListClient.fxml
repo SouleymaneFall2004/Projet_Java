@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" hgap="15" prefHeight="517.0" prefWidth="688.0" style="-fx-padding: 20;" vgap="15" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controllers.ControllerDebtListClient">
+    <Button mnemonicParsing="false" onAction="#disconnect" text="Disconnect" GridPane.rowIndex="1" />
+    <Button mnemonicParsing="false" onAction="#add" text="New debt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <ComboBox fx:id="filterComboBox" GridPane.rowIndex="2">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="unpaid debts" />
+                <String fx:value="debt demands" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Button mnemonicParsing="false" onAction="#filter" text="Ok" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <TableView fx:id="debtTableView" prefHeight="305.0" prefWidth="442.0" GridPane.columnSpan="7" GridPane.rowIndex="3">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="44.0" text="ID" />
+            <TableColumn fx:id="amountTotalColumn" prefWidth="109.0" text="Amount total" />
+            <TableColumn fx:id="amountSentColumn" prefWidth="102.0" text="Sent" />
+            <TableColumn fx:id="amountMissingColumn" prefWidth="105.0" text="Missing" />
+            <TableColumn fx:id="statusColumn" prefWidth="97.0" text="Status" />
+            <TableColumn fx:id="editColumn" prefWidth="104.0" text="Edit" />
+        </columns>
+    </TableView>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="79.5" minWidth="0.0" prefWidth="79.5" />
+        <ColumnConstraints maxWidth="79.5" minWidth="0.0" prefWidth="28.5" />
+        <ColumnConstraints maxWidth="103.0" minWidth="0.0" prefWidth="0.0" />
+        <ColumnConstraints maxWidth="168.0" minWidth="65.0" prefWidth="168.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+        <RowConstraints maxHeight="26.0" minHeight="26.0" prefHeight="26.0" />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+
+</GridPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" hgap="15" prefHeight="517.0" prefWidth="688.0" style="-fx-padding: 20;" vgap="15"
+          xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="org.example.demo.controllers.ControllerPaidDebtList">
+    <Button mnemonicParsing="false" onAction="#disconnect" text="Disconnect" GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onAction="#accounts" text="Accounts" GridPane.columnIndex="3"
+            GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onAction="#articles" text="Articles" GridPane.columnIndex="4"
+            GridPane.rowIndex="1"/>
+    <Button mnemonicParsing="false" onAction="#paidDebts" text="Paid debts" GridPane.columnIndex="5"
+            GridPane.rowIndex="1"/>
+
+    <TableView fx:id="paidDebtTableView" prefHeight="376.0" prefWidth="515.0" GridPane.columnSpan="6"
+               GridPane.rowIndex="2">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="dateColumn" text="Date"/>
+            <TableColumn fx:id="amountTotalColumn" text="Amount Total"/>
+            <TableColumn fx:id="amountSentColumn" text="Amount Sent"/>
+            <TableColumn fx:id="amountMissingColumn" text="Amount Missing"/>
+        </columns>
+    </TableView>
+
+    <columnConstraints>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+
+</GridPane>
